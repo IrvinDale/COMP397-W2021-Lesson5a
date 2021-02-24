@@ -6,7 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public CharacterController controller;
 
-    [Header ("Movement")]
+    [Header("Movement")]
     public float maxSpeed = 10.0f;
     public float gravity = -30.0f;
     public float jumpHeight = 3.0f;
@@ -18,7 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    [Header("MiniMap")]
+    [Header("MiniMap")] 
     public GameObject miniMap;
 
     // Start is called before the first frame update
@@ -54,9 +54,9 @@ public class PlayerBehaviour : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            // toggle the Minimap on/off
+            // toggle the MiniMap on/off
             miniMap.SetActive(!miniMap.activeInHierarchy);
         }
     }
